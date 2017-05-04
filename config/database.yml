@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: justus
+  password: yungmulla01
+
+development:
+  <<: *default
+  database: solidus_testing_development
+test:
+  <<: *default
+  database: solidus_testing_test
+
+production:
+  <<: *default
+  database: solidus_testing_production
+  password: <%= ENV['SOLIDUS_TESTING_DATABASE_PASSWORD'] %>
