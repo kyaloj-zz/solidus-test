@@ -52,3 +52,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'solidus_signifyd'
+gem 'solidus_gateway'
